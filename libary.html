@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+        }
+
+        header {
+            background: #1e88e5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .dashboard {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        .book-records {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .book-records:hover {
+            transform: translateY(-5px);
+        }
+
+        .book-records h2 {
+            margin: 0;
+            font-size: 2rem;
+            color: black;
+        }
+
+        .book-records p {
+            margin: 5px 0 0;
+            color: #555;
+        }
+
+        .search-bar {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid black;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        th,
+        td {
+            padding: 14px;
+            text-align: left;
+        }
+
+        th {
+            background: rgb(12, 7, 7);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .btn {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .edit {
+            background: #43a047;
+            color: white;
+        }
+
+        .delete {
+            background: #e53935;
+            color: white;
+        }
+
+        body {
+            background: url('https://static.wixstatic.com/media/nsplsh_52ff8bbff2ae43c0b2d73e09f6367867~mv2.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header><u style="color: black;">📚 Library Management </u></header>
+
+
+    <div class="dashboard">
+        <div class="book-records">
+            <h2><u>120</u></h2>
+            <p img src=""><i>Total Books</i></p>
+        </div>
+        <div class="book-records">
+            <h2><u>45</u></h2>
+            <p img src="borrowed.jpg" alt="Borrowed"><i>Borrowed</i></p>
+        </div>
+        <div class="book-records">
+            <h2><u>10</u></h2>
+            <p img src="overdue.jpg" alt="Overdue"><i>Overdue</i></p>
+        </div>
+        <div class="book-records">
+            <h2><u>50</u></h2>
+            <p img src="members.jpg" alt="Members"><i>Members</i></p>
+        </div>
+    </div>
+
+
+    <div class="search-bar">
+        <input type="text" placeholder="🔍 Search books...">
+    </div>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Availability</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><i>1984</i></td>
+                <td><i>George Orwell</i></td>
+                <td><i>Dystopian</i></td>
+                <td><i>Available</i></td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td><i>The Hobbit</i></td>
+                <td><i>J.R.R. Tolkien</i></td>
+                <td><i>Fantasy</i></td>
+                <td><i>Borrowed</i></td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td><i>To Kill a Mockingbird</i></td>
+                <td><i>Harper Lee</i></td>
+                <td><i>Classic</i></td>
+                <td><i>Available</i></td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td><i>The Great Gatsby</i></td>
+                <td><i>F. Scott Fitzgerald</i></td>
+                <td><i>Classic</i></td>
+                <td><i>Overdue</i></td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td><i>Harry Potter and the Sorcerer's Stone</i></td>
+                <td><i>J.K. Rowling</i></td>
+                <td><i>Fantasy</i></td>
+                <td><i>Available</i></td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td><i>The Catcher in the Rye</i></td>
+                <td><i>J.D. Salinger</i></td>
+                <td><i>Classic</i></td>
+                <td><i>Borrowed</i></td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td><i>The Lord of the Rings</i></td>
+                <td><i>J.R.R. Tolkien</i></td>
+                <td><i>Fantasy</i></td>
+                <td><i>Available</i></td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
